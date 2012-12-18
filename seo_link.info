@@ -1,0 +1,5 @@
+name = SEO Link 
+description = Search first occurance of a keyword, and replace it by a link
+core = 6.x
+author = Jonathan de Montalembert
+version = 0.1

@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function seo_link_uninstall() {
+  drupal_uninstall_schema('newsticker');
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function seo_link_install() {
+  drupal_install_schema('seo_link');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function seo_link_schema() {
+  $schema['seo_link_item'] = array(
+    'description' => t('Changes keyword to links for SEO.'),
+    'fields' => array(
+      'slid' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => t('SEO Link ID.')
+      ),
+      'find' => array(
+        'type' => 'varchar',
+        'length' => 256,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => t('Keyword')
+      ),
+      'replace_by' => array(
+        'type' => 'varchar',
+        'length' => 512,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => t('Replace By')
+      )
+    ),
+    'indexes' => array('slid' => array('slid')),
+    'primary key' => array('slid'),
+  );
+
+  return $schema;
+}
