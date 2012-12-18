@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Having issues => https://github.com/roine/seo_link/issues
+ * Want to participate => https://github.com/roine/seo_link/pulls
+*/
+
 /**
  * Implementation of hook_help().
  */
