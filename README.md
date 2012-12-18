@@ -1,4 +1,10 @@
 seo_link
 ========
 
-Allow to replace the first occurence of a keyword by a link
+A drupal module for SEO purpose
+
+ - Type => Node Module
+ - version => 0.1
+ - Author => Jonathan de Montalembert
+ - Core => 6.x
+ - Function => Find and replace predefined keywords by links for first occurence
